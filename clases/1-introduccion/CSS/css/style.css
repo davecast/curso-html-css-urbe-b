@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Noto Sans", sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+.parrafo-rojo {
+  color: red;
+}
+.parrafo-verde {
+  color: green;
+  margin-bottom: 60px;
+}
+.parrafo-blue {
+  width: 100%;
+  max-width: 768px;
+  color: blue;
+  /*Margin primera forma: todos los lados*/
+  /* margin: 10px; */
+  /*Margin segunda forma:*/
+  /*top bottom / left right*/
+  /* margin: 10px 15px; */
+  /*Margin tercera forma:*/
+  /*top / left right / bottom*/
+  /* margin: 10px 25px 80px; */
+  /*Margin cuarta forma:*/
+  /*top / right / bottom / left*/
+  /* margin: 10px 40px 30px 70px; */
+
+  /*PADDING*/
+  padding: 8px 16px;
+  border: 2px solid #efefef;
+  margin: 0 auto 60px;
+  /*Padding primera forma: todos los lados*/
+  /* padding: 10px; */
+  /*Padding segunda forma:*/
+  /*top bottom / left right*/
+  /* padding: 10px 15px; */
+  /*Padding tercera forma:*/
+  /*top / left right / bottom*/
+  /* padding: 10px 25px 80px; */
+  /*Padding cuarta forma:*/
+  /*top / right / bottom / left*/
+  /* padding: 10px 40px 30px 70px; */
+}
+
+.cuadrado {
+  background-color: #eea5fa;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  position: relative;
+}
+.forma_internas {
+  width: 35px;
+  height: 35px;
+  font-size: 6px;
+  text-align: center;
+  line-height: 35px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.cuadrado__interno {
+  background-color: #a050ad;
+}
+.circulo__interno {
+  background-color: #d2faa5;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
