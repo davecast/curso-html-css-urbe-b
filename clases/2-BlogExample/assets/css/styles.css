@@ -3,7 +3,6 @@
 body {
   font-family: "Source Sans Pro", sans-serif;
   margin: 0;
-  background-color: #ededed;
   padding: 0 0 10rem;
 }
 
@@ -40,17 +39,87 @@ a {
 .Section {
   padding: 4.5rem 0;
 }
+.Section--medium {
+  padding: 2.25rem 0;
+}
 .Container {
   width: 100%;
   max-width: 80rem;
   margin: 0 auto;
+}
+.Row {
+  display: flex;
+  width: 100%;
+}
+.Article {
+  display: flex;
+  flex-direction: column;
+}
+.Article--separator-bottom {
+  margin: 0 0 2rem;
+}
+.Article--half {
+  width: calc(50% - 0.75rem);
+}
+.ArticleTitle {
+  color: #2b2d57;
+}
+.ArticleImage,
+.ArticleTitle {
+  display: block;
+  margin: 0 0 1.5rem;
+}
+.Article--small .ArticleImage,
+.Article--small .ArticleTitle {
+  margin: 0 0 1.125rem;
+}
+.ArticleImage img {
+  max-width: 100%;
+  border-radius: 1rem;
+}
+.ArticleInformation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ArticleTitle h2 {
+  font-size: 1.75rem;
+  line-height: 2.125rem;
+}
+.ArticleTitle h4 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.ArticleContent {
+}
+.ArticleSummary {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin: 0 0 1.5rem;
+}
+.Article--small .ArticleSummary {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 0 0 1.125rem;
+}
+.ArticleLink {
+  display: inline-block;
+  padding: 0 0 0.2rem;
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #8447fb;
+  border-bottom: 1px solid #8447fb;
+  transition: all 0.12s ease-in-out;
+}
+.ArticleLink:hover {
+  color: #5e31b7;
+  font-weight: 700;
 }
 .Button {
   display: inline-block;
   border-radius: 0.5rem;
   font-weight: 600;
   letter-spacing: 1.125px;
-  padding: 1.125rem 2rem;
   transition: all 0.25s ease-in-out;
 }
 .Button:hover {
@@ -62,14 +131,17 @@ a {
   box-shadow: 0 0 0 0 rgb(0, 0, 0);
 }
 .Button--tiny {
+  padding: 0.65rem 1.625rem;
   font-size: 0.75rem;
   line-height: 0.75rem;
 }
 .Button--small {
+  padding: 0.875rem 1.75rem;
   font-size: 1rem;
   line-height: 1rem;
 }
 .Button--big {
+  padding: 1.125rem 2rem;
   font-size: 1.125rem;
   line-height: 1.125rem;
 }
@@ -83,9 +155,14 @@ a {
 .Button--purple:active {
   background-color: #8447fb;
 }
-.Button--outline {
+.Button--outline--purple {
+  border: 2px solid #8447fb;
+  color: #8447fb;
 }
-
+.Button--outline--purple:hover {
+  background-color: #8447fb;
+  color: #ffffff;
+}
 /*
 ** Estilos Header
 */
@@ -190,4 +267,24 @@ a {
   line-height: 2rem;
   margin: 0 0 1.5rem;
   color: #2b2d57;
+}
+
+/*
+** Estilos Seccion Secundaria
+*/
+.Section--second {
+}
+.Section--second .Row {
+  justify-content: space-between;
+}
+.Row--secound-section-content {
+  /* width: 75%; */
+  /* padding: 0 1rem 0 0; */
+  width: calc(75% - 1rem);
+  display: flex;
+  justify-content: space-between;
+}
+.Row--secound-section-sidebar {
+  width: calc(25% - 1rem);
+  /* padding: 0 0 0 1rem; */
 }
