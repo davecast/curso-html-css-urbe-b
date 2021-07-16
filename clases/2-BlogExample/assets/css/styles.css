@@ -1,9 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Source+Sans+Pro&display:wght@500;600=swap");
 
 body {
   font-family: "Source Sans Pro", sans-serif;
   margin: 0;
   background-color: #ededed;
+  padding: 0 0 10rem;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 h1,
@@ -29,10 +34,56 @@ a {
 /*
 ** Utilidades
 */
+.border-mark {
+  border: 1px solid red;
+}
+.Section {
+  padding: 4.5rem 0;
+}
 .Container {
+  width: 100%;
   max-width: 80rem;
   margin: 0 auto;
-  background-color: red;
+}
+.Button {
+  display: inline-block;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 1.125px;
+  padding: 1.125rem 2rem;
+  transition: all 0.25s ease-in-out;
+}
+.Button:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.15);
+}
+.Button:active {
+  transform: translateY(0);
+  box-shadow: 0 0 0 0 rgb(0, 0, 0);
+}
+.Button--tiny {
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+}
+.Button--small {
+  font-size: 1rem;
+  line-height: 1rem;
+}
+.Button--big {
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+}
+.Button--purple {
+  color: #ffffff;
+  background-color: #8447fb;
+}
+.Button--purple:hover {
+  background-color: #5e31b7;
+}
+.Button--purple:active {
+  background-color: #8447fb;
+}
+.Button--outline {
 }
 
 /*
@@ -40,4 +91,103 @@ a {
 */
 .Header {
   background-color: #ffffff;
+  padding: 1.5rem 0;
+}
+.HeaderContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.HeaderLogo {
+  display: block;
+  width: 10rem;
+}
+.HeaderLogo img {
+  max-width: 100%;
+}
+.HeaderMenu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.HeaderMenuItem {
+  margin: 0 0 0 2.25rem;
+}
+.HeaderMenuItem:first-child {
+  margin: 0;
+}
+
+.HeaderMenuLink {
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #2b2d57;
+  font-weight: 600;
+  /* transition: color 0.25s linear; */
+  transition: color 0.25s ease-in-out;
+}
+
+.HeaderMenuLink:hover {
+  color: #8447fb;
+}
+
+.HeaderMenuLink--icon img {
+  width: 1.125rem;
+  transition: all 0.25s ease-in-out;
+}
+.HeaderMenuLink--icon img:hover {
+  transform: scale(1.1);
+}
+
+/*
+** Estilos Banner Principal
+*/
+.Section--banner-principal {
+  min-height: 36rem;
+  background-image: url("../img/banner.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  position: relative;
+}
+.SectionOverlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background-color: #000000; */
+  /* background-color: rgba(255, 255, 255, 0.7); */
+  background-image: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 15%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.Section--banner-principal .Container {
+  z-index: 2;
+}
+
+.BannerContent {
+  width: 100%;
+  max-width: 40rem;
+}
+.BannerTitle {
+  font-size: 3rem;
+  line-height: 3.75rem;
+  font-weight: 600;
+  color: #2b2d57;
+  margin: 0 0 1rem;
+}
+.BannerDescription {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  margin: 0 0 1.5rem;
+  color: #2b2d57;
 }
