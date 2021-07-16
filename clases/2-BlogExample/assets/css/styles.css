@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Source+Sans+Pro&display=swap");
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+  background-color: #ededed;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+/*
+** Utilidades
+*/
+.Container {
+  max-width: 80rem;
+  margin: 0 auto;
+  background-color: red;
+}
+
+/*
+** Estilos Header
+*/
+.Header {
+  background-color: #ffffff;
+}
