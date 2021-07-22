@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+
+    <style>
+      .container {
+        padding: 200px 0;
+      }
+      .cuadrados {
+        display: grid;
+        grid-template: rows / cols;
+        grid-template: 1fr / 1fr 1fr 1fr;
+        grid-gap: 0 2rem;
+
+        margin: 0 auto;
+        width: 500px;
+        height: 500px;
+        background-color: red;
+      }
+      .cuadrados--internos {
+        background-color: coral;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cuadrados">
+        <div class="cuadrados--internos">a</div>
+        <div class="cuadrados--internos">b</div>
+        <div class="cuadrados--internos">c</div>
+        <div class="cuadrados--internos">d</div>
+        <div class="cuadrados--internos">e</div>
+        <div class="cuadrados--internos">f</div>
+      </div>
+    </div>
+  </body>
+</html>
