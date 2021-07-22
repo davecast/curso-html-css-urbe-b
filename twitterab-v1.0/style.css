@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'twitterab';
+  src:  url('fonts/twitterab.eot?x2ig03');
+  src:  url('fonts/twitterab.eot?x2ig03#iefix') format('embedded-opentype'),
+    url('fonts/twitterab.ttf?x2ig03') format('truetype'),
+    url('fonts/twitterab.woff?x2ig03') format('woff'),
+    url('fonts/twitterab.svg?x2ig03#twitterab') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="tab-"], [class*=" tab-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'twitterab' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.tab-adduser:before {
+  content: "\e900";
+}
+.tab-compass:before {
+  content: "\e901";
+}
+.tab-hearth:before {
+  content: "\e902";
+}
+.tab-house:before {
+  content: "\e903";
+}
+.tab-image:before {
+  content: "\e904";
+}
+.tab-mark:before {
+  content: "\e905";
+}
+.tab-marksolid:before {
+  content: "\e906";
+}
+.tab-message:before {
+  content: "\e907";
+}
+.tab-reload:before {
+  content: "\e908";
+}
