@@ -1,0 +1,722 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Poppins:wght@500;600&display=swap");
+
+:root {
+  --fontMain: #828282;
+  --fontSecondary: #333333;
+  --focus: #2f80ed;
+  --focusHover: #1b4e92;
+  --black: #4f4f4f;
+  --gray: #bdbdbd;
+  --white: #ffffff;
+  --background: #f2f2f2;
+  --backgroundSecondary: #fafafa;
+  --borderRadiusSmall: 8px;
+  --borderRadiusMedium: 12px;
+  --shadowSmall: 0px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans", sans-serif;
+  background-color: var(--background);
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  font-weight: 600;
+}
+
+a,
+a:visited,
+a:link {
+  text-decoration: none;
+  color: var(--fontMain);
+}
+/*
+* 0.25rem = 4px
+* 0.5rem = 8px
+* 0.75rem = 12px
+* 1rem = 16px
+* 1.5rem = 24px
+* 2rem = 32px
+* 2.5rem = 40px
+* 3.125rem = 50px
+*/
+
+/*
+* Utils
+*/
+
+.Container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: calc(100% - 2rem);
+}
+
+.Button {
+  border: none;
+  appearance: none;
+  font-family: "Noto Sans", sans-serif;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--borderRadiusSmall);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.75rem 1.75rem;
+  letter-spacing: 1.125px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+.Button i {
+  margin: 0 0.25rem 0 0;
+}
+
+.Button:hover {
+  transform: translateY(-0.25rem);
+  background-color: var(--focusHover);
+  box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.15);
+}
+.Button:active {
+  transform: translateY(0);
+  box-shadow: 0 0 0 0 rgb(0, 0, 0);
+}
+.Button--blue {
+  color: var(--white);
+  background-color: var(--focus);
+}
+
+/*
+* Header
+*/
+.Header {
+  height: 4.375rem;
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
+}
+
+.HeaderLogo {
+  display: block;
+  z-index: 2;
+}
+.HeaderLogoImage {
+  max-width: 2.5rem;
+}
+.HeaderContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.HeaderAvatar {
+  max-width: 2rem;
+  border-radius: 0.25rem;
+}
+.HeaderNav {
+  display: none;
+  z-index: 1;
+}
+.HeaderProfile {
+  z-index: 2;
+}
+.HeaderProfileName {
+  display: none;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+}
+
+.HeaderMenu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4.375rem;
+}
+.HeaderMenuItem {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1.5rem 0 0;
+  position: relative;
+}
+.HeaderMenuItem::before {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  height: 5px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+.HeaderMenuItem:last-child {
+  margin: 0;
+}
+.HeaderMenuLink {
+  padding: 0 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+  font-weight: 500;
+  color: var(--fontMain);
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.HeaderMenuItem:hover .HeaderMenuLink,
+.HeaderMenuItem--active .HeaderMenuLink {
+  color: var(--focus);
+  font-weight: 600;
+}
+.HeaderMenuItem:hover::before,
+.HeaderMenuItem--active::before {
+  background-color: var(--focus);
+}
+
+/*
+* Mobile Nav
+*/
+.MobileNav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--white);
+  padding: 0 0.75rem;
+}
+.MobileNavMenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template: 1fr / repeat(3, 1fr);
+  grid-gap: 0;
+}
+.MobileNavMenuItem {
+  height: 4.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.MobileNavMenuItem::before {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  height: 5px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+.MobileNavMenuItem--active::before {
+  background-color: var(--focus);
+}
+
+.MobileNavMenuLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 100%;
+  border-radius: var(--borderRadiusSmall);
+}
+.MobileNavMenuLink:active {
+  background-color: var(--background);
+}
+.MobileNavMenuLink i {
+  font-size: 1.25rem;
+}
+.MobileNavMenuItem--active .MobileNavMenuLink i {
+  color: var(--focus);
+}
+
+/*
+* SectionHero
+*/
+.SectionHero {
+}
+.SectionHeroBanner {
+  min-height: 10.625rem;
+  background-image: url("../images/banner.jpg");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+.SectionHeroContent {
+  transform: translateY(-1.5rem);
+  text-align: center;
+}
+.SectionHeroProfile {
+  position: relative;
+  background-color: var(--white);
+  box-shadow: var(--shadowSmall);
+  border-radius: var(--borderRadiusMedium);
+  padding: 3.25rem 1.5rem 1.75rem;
+}
+.SectionHeroProfileAvatar {
+  position: absolute;
+  width: 7.5rem;
+  height: 7.5rem;
+  margin: 0 auto;
+  font-size: 0;
+  left: 0;
+  right: 0;
+  top: -5rem;
+  background-color: var(--white);
+  box-shadow: var(--shadowSmall);
+  padding: 0.25rem;
+  border-radius: var(--borderRadiusSmall);
+}
+.SectionHeroProfileAvatar img {
+  max-width: 100%;
+  border-radius: var(--borderRadiusSmall);
+}
+.SectionHeroProfileName {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  color: var(--fontSecondary);
+  margin: 0 0 0.75rem;
+}
+.SectionHeroProfileMeta {
+  width: calc(100% - 5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+.SectionHeroProfileMetaFollows {
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  color: var(--fontMain);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+.SectionHeroProfileMetaFollows:first-child {
+  margin: 0 2rem 0 0;
+}
+.SectionHeroProfileMetaFollows strong {
+  color: var(--fontSecondary);
+  margin: 0 0.25rem 0 0;
+}
+.SectionHeroProfileDescription {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  color: var(--fontMain);
+  margin: 0 0 1.75rem;
+}
+
+/*
+* Section Body Content
+*/
+.SectionBodyGrid {
+  display: grid;
+}
+.SectionBodyContent {
+  padding: 0 0 5rem;
+}
+
+.Sidebar {
+  background-color: var(--white);
+  border-radius: var(--borderRadiusSmall);
+  box-shadow: var(--shadowSmall);
+  padding: 1.25rem 0;
+  margin: 0 0 1.5rem;
+}
+
+.SidebarFilters {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.SidebarFilter {
+  position: relative;
+  margin: 0 0 0.875rem;
+}
+.SidebarFilter:last-child {
+  margin: 0;
+}
+.SidebarFilter::before {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  height: 100%;
+  width: 5px;
+  left: 0;
+  bottom: 0;
+  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  transition: all 0.25s ease-in-out;
+}
+.SidebarFilter--active::before,
+.SidebarFilter:hover::before {
+  background-color: var(--focus);
+}
+.SidebarFilter a {
+  display: block;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+  color: var(--focus);
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  padding: 0.625rem 1rem;
+}
+
+.Post {
+  margin: 0 0 1.5rem;
+}
+.PostRetweet {
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+  color: var(--fontMain);
+  margin: 0 0 0.75rem;
+}
+.PostRetweet i {
+  margin: 0 0.5rem 0 0;
+}
+.PostContainer {
+  background-color: var(--white);
+  border-radius: var(--borderRadiusSmall);
+  box-shadow: var(--shadowSmall);
+  padding: 1.25rem;
+}
+.PostHeader {
+  display: grid;
+  grid-template: 1fr / 2.5rem 1fr;
+  grid-gap: 0 1rem;
+  align-items: center;
+  margin: 0 0 1.25rem;
+}
+.PostAvatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--borderRadiusSmall);
+  overflow: hidden;
+}
+.PostInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.PostName {
+  color: var(--fontSecondary);
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1rem;
+  margin: 0 0 0.5rem;
+}
+.PostDate {
+  color: var(--gray);
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+}
+.PostBody {
+}
+.PostText {
+  color: var(--fontSecondary);
+  font-weight: 400;
+  line-height: 1.75rem;
+  margin: 0 0 1.25rem;
+}
+.PostImage {
+  margin: 0;
+  font-size: 0;
+  min-height: 6.25rem;
+  max-height: 15.625rem;
+  height: 15.625rem;
+  overflow: hidden;
+  border-radius: var(--borderRadiusSmall);
+  margin: 0 0 1rem;
+}
+.PostImage img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.PostCounts {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0 0 0.5rem;
+}
+.PostCount {
+  display: inline-block;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  color: var(--gray);
+  margin: 0 0 0 1rem;
+}
+
+.PostActions {
+  border-top: 1px solid var(--background);
+  border-bottom: 1px solid var(--background);
+  padding: 0.25rem 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.PostAction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--borderRadiusSmall);
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+.PostAction * {
+  pointer-events: none;
+}
+.PostAction:hover {
+  background-color: var(--background);
+}
+.PostAction span {
+  display: none;
+}
+
+.PostAction .hearth {
+  width: 35px;
+  height: 35px;
+  background-size: cover;
+  background-image: url("../images/likeanimation.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  transition: background-position 1s steps(28);
+  transition-duration: 0s;
+}
+.PostAction--like--active .hearth {
+  transition-duration: 1s;
+  background-position: -980px 0;
+}
+.PostAction i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.PostComment {
+  display: grid;
+  grid-template: 1fr / 2.5rem 1fr;
+  grid-gap: 1rem;
+  padding: 0.75rem 0;
+}
+.PostComment--with-replies {
+  border-bottom: 1px solid var(--background);
+  margin: 0 0 1.5rem;
+}
+.PostForm {
+  display: grid;
+  border: 1px solid var(--background);
+  grid-template: 1fr / 1fr 2.5rem;
+  align-items: center;
+  border-radius: var(--borderRadiusSmall);
+}
+.PostForm i {
+  align-self: center;
+  text-align: center;
+  color: var(--gray);
+  cursor: pointer;
+}
+.PostFormReply {
+  outline: none;
+  height: 100%;
+  width: 100%;
+  border: none;
+  padding: 0 0.625rem;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+}
+
+.PostReplies {
+}
+.PostReply {
+  display: grid;
+  grid-template: 1fr / 2.5rem 1fr;
+  grid-gap: 0 1rem;
+  margin: 0 0 1.5rem;
+}
+.PostReplyContent {
+}
+.PostReplyComment {
+  background-color: var(--backgroundSecondary);
+  padding: 0.75rem 0.875rem 1.25rem;
+  border-radius: var(--borderRadiusSmall);
+  margin: 0 0 0.5rem;
+}
+.PostReplyHeader {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0.75rem;
+}
+.PostReplyHeaderName {
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+  color: var(--fontSecondary);
+  margin: 0 1rem 0 0;
+}
+.PostReplyHeaderDate {
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  color: var(--gray);
+}
+.PostReplyBody {
+  color: var(--fontSecondary);
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin: 0;
+}
+.PostReplyLikes {
+  color: var(--gray);
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+}
+.PostReplyLikes i {
+  margin: 0 0.5rem 0 0;
+}
+.PostReplyLikes span:first-child {
+  margin: 0 0.5rem 0 0;
+}
+.PostReplyLikes span:last-child {
+  margin: 0 0 0 0.5rem;
+}
+
+/*575px*/
+@media screen and (min-width: 35.94rem) {
+  .PostImage {
+    height: 23.4375rem;
+    min-height: 18.75rem;
+    max-height: 23.4375rem;
+  }
+}
+
+/*768px*/
+@media screen and (min-width: 48rem) {
+  .HeaderNav {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  .MobileNav {
+    display: none;
+  }
+  .HeaderContent {
+    position: relative;
+  }
+  .HeaderProfile {
+    display: flex;
+    align-items: center;
+  }
+  .HeaderAvatar {
+    margin: 0 0.75rem 0 0;
+  }
+  .HeaderProfileName {
+    display: block;
+  }
+  .SectionHeroBanner {
+    min-height: 18.75rem;
+  }
+  .SectionHeroProfile {
+    display: grid;
+    grid-template: 1fr / 10rem 1fr 8rem;
+    grid-gap: 0 1.25rem;
+    padding: 1.5rem 1.25rem 1.5rem;
+  }
+  .SectionHeroProfileAvatar {
+    position: static;
+    width: 10rem;
+    transform: translateY(-5rem);
+  }
+  .SectionHeroContent {
+    text-align: left;
+    margin-top: -2.5rem;
+  }
+  .SectionHeroProfileInfo {
+    display: flex;
+    margin: 0 0 1.25rem;
+  }
+  .SectionHeroProfileName {
+    flex: 0 1 auto;
+    margin: 0 2rem 0 0;
+  }
+  .SectionHeroProfileDescription {
+    margin: 0;
+    max-width: 28.125rem;
+  }
+  .SectionHeroProfileMeta {
+    width: auto;
+    justify-content: flex-start;
+    margin: 0;
+  }
+  .SectionBodyGrid {
+    grid-template: 1fr / 18.75rem calc(100% - 20.25rem);
+    grid-gap: 0 1.5rem;
+  }
+  .SectionBodyContent {
+    padding: 0;
+  }
+  .SectionBodyGridItem {
+  }
+  .SectionBodyGridItem--left {
+  }
+  .SectionBodyGridItem--right {
+  }
+  .Sidebar {
+    margin: 0;
+  }
+}
+
+/*980px*/
+@media screen and (min-width: 61.25rem) {
+  .SectionBodyContent .Container,
+  .SectionHeroContent .Container {
+    max-width: 69.375rem;
+    padding: 0 1rem;
+  }
+  .Header .Container {
+    max-width: calc(100% - 6rem);
+  }
+  .PostAction {
+    padding: 0.5rem 1.75rem;
+  }
+  .PostAction .hearth {
+    margin: 0 1rem 0 0;
+  }
+  .PostAction span {
+    display: inline-block;
+  }
+  .PostAction i {
+    margin: 0 1rem 0 0;
+    height: 35px;
+    width: 35px;
+  }
+}
+
+/*1280px*/
+@media screen and (min-width: 80rem) {
+}

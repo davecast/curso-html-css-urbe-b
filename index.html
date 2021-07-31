@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twitter</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/images/icon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./assets/css/icons.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="Header">
+      <div class="Container">
+        <div class="HeaderContent">
+          <a href="#" class="HeaderLogo">
+            <img
+              class="HeaderLogoImage"
+              src="./assets/images/logo.png"
+              alt="Twitter ab"
+            />
+          </a>
+          <nav class="HeaderNav">
+            <ul class="HeaderMenu">
+              <li class="HeaderMenuItem HeaderMenuItem--active">
+                <a href="#" class="HeaderMenuLink">Home</a>
+              </li>
+              <li class="HeaderMenuItem">
+                <a href="#" class="HeaderMenuLink">Explore</a>
+              </li>
+              <li class="HeaderMenuItem">
+                <a href="#" class="HeaderMenuLink">Bookmarks</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="HeaderProfile">
+            <img
+              class="HeaderAvatar"
+              src="./assets/images/person_2.jpg"
+              alt="John Doe"
+            />
+            <h3 class="HeaderProfileName">John Doe</h3>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="SectionHero">
+      <div class="SectionHeroBanner"></div>
+      <div class="SectionHeroContent">
+        <div class="Container">
+          <div class="SectionHeroProfile">
+            <figure class="SectionHeroProfileAvatar">
+              <img src="./assets/images/person_2.jpg" alt="John Doe" />
+            </figure>
+            <div class="SectionHeroProfileContent">
+              <div class="SectionHeroProfileInfo">
+                <h2 class="SectionHeroProfileName">John Doe</h2>
+                <div class="SectionHeroProfileMeta">
+                  <label class="SectionHeroProfileMetaFollows">
+                    <strong>2569</strong>Following</label
+                  >
+                  <label class="SectionHeroProfileMetaFollows">
+                    <strong>10.8K</strong>Followers</label
+                  >
+                </div>
+              </div>
+              <p class="SectionHeroProfileDescription">
+                Photographer & Filmmaker based in Copenhagen, Denmark ✵ 🚩
+              </p>
+            </div>
+            <div class="SectionHeroProfileActions">
+              <button class="Button Button--blue">
+                <i class="tab-adduser"></i> Follow
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="SectionBodyContent">
+      <div class="Container">
+        <div class="SectionBodyGrid">
+          <div class="SectionBodyGridItem SectionBodyGridItem--left">
+            <aside class="Sidebar">
+              <ul class="SidebarFilters">
+                <li class="SidebarFilter SidebarFilter--active">
+                  <a class="SidebarFilterLink" href="#">Tweets</a>
+                </li>
+                <li class="SidebarFilter">
+                  <a class="SidebarFilterLink" href="#">Tweets & replies</a>
+                </li>
+                <li class="SidebarFilter">
+                  <a class="SidebarFilterLink" href="#">Media</a>
+                </li>
+                <li class="SidebarFilter">
+                  <a class="SidebarFilterLink" href="#">Likes</a>
+                </li>
+              </ul>
+            </aside>
+          </div>
+          <div class="SectionBodyGridItem SectionBodyGridItem--right">
+            <article class="Post">
+              <div class="PostContainer">
+                <div class="PostHeader">
+                  <img
+                    class="PostAvatar"
+                    src="./assets/images/person_3.jpg"
+                    alt="Eric Salman"
+                  />
+                  <div class="PostInfo">
+                    <h3 class="PostName">Eric Salman</h3>
+                    <span class="PostDate">24 August at 20:43 </span>
+                  </div>
+                </div>
+                <div class="PostBody">
+                  <p class="PostText">
+                    “We travel, some of us forever, lorem ipsum comment to seek
+                    other places, other lives, other souls.” – Anais Nin
+                  </p>
+                  <figure class="PostImage">
+                    <img
+                      src="./assets/images/post1.jpg"
+                      alt="Traveling – it leaves you speechless, then turns you into a storyteller."
+                    />
+                  </figure>
+                  <div class="PostCounts">
+                    <span class="PostCount">449 Comments</span>
+                    <span class="PostCount">59k Retweets</span>
+                    <span class="PostCount">234 Saved</span>
+                  </div>
+                  <ul class="PostActions">
+                    <li class="PostAction">
+                      <i class="tab-message"></i><span>Comment</span>
+                    </li>
+                    <li class="PostAction">
+                      <i class="tab-reload"></i><span>Retweeted</span>
+                    </li>
+                    <li
+                      class="
+                        PostAction PostAction--like PostAction--like--active
+                      "
+                    >
+                      <div class="hearth"></div>
+                      <span>Liked</span>
+                    </li>
+                    <li class="PostAction">
+                      <i class="tab-mark"></i><span>Saved</span>
+                    </li>
+                  </ul>
+                  <div class="PostComment">
+                    <img
+                      class="PostAvatar"
+                      src="./assets/images/person_4.jpg"
+                      alt="Arturo Martinez"
+                    />
+                    <form class="PostForm">
+                      <input
+                        class="PostFormReply"
+                        type="text"
+                        placeholder="Tweet your reply"
+                      />
+                      <i class="tab-image"></i>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="Post">
+              <div class="PostRetweet">
+                <i class="tab-reload"></i> <span>Daniel Jensen Retweeted</span>
+              </div>
+              <div class="PostContainer">
+                <div class="PostHeader">
+                  <img
+                    class="PostAvatar"
+                    src="./assets/images/person_2.jpg"
+                    alt="Eric Salman"
+                  />
+                  <div class="PostInfo">
+                    <h3 class="PostName">Eric Salman</h3>
+                    <span class="PostDate">24 August at 20:43 </span>
+                  </div>
+                </div>
+                <div class="PostBody">
+                  <p class="PostText">
+                    “The gladdest moment in human life, methinks, is a departure
+                    into unknown lands.” – Sir Richard Burton
+                  </p>
+                  <div class="PostCounts">
+                    <span class="PostCount">449 Comments</span>
+                    <span class="PostCount">59k Retweets</span>
+                    <span class="PostCount">234 Saved</span>
+                  </div>
+                  <ul class="PostActions">
+                    <li class="PostAction">
+                      <i class="tab-message"></i><span>Comment</span>
+                    </li>
+                    <li class="PostAction">
+                      <i class="tab-reload"></i><span>Retweeted</span>
+                    </li>
+                    <li class="PostAction PostAction--like">
+                      <div class="hearth"></div>
+                      <span>Liked</span>
+                    </li>
+                    <li class="PostAction">
+                      <i class="tab-mark"></i><span>Saved</span>
+                    </li>
+                  </ul>
+                  <div class="PostComment PostComment--with-replies">
+                    <img
+                      class="PostAvatar"
+                      src="./assets/images/person_4.jpg"
+                      alt="Arturo Martinez"
+                    />
+                    <form class="PostForm">
+                      <input
+                        class="PostFormReply"
+                        type="text"
+                        placeholder="Tweet your reply"
+                      />
+                      <i class="tab-image"></i>
+                    </form>
+                  </div>
+                  <div class="PostReplies">
+                    <div class="PostReply">
+                      <img
+                        class="PostAvatar"
+                        src="./assets/images/person_4.jpg"
+                        alt="Arturo Martinez"
+                      />
+                      <div class="PostReplyContent">
+                        <div class="PostReplyComment">
+                          <div class="PostReplyHeader">
+                            <h4 class="PostReplyHeaderName">Waqar Bloom</h4>
+                            <span class="PostReplyHeaderDate"
+                              >24 August at 20:43
+                            </span>
+                          </div>
+                          <p class="PostReplyBody">
+                            I’ve seen awe-inspiring things that I thought I’d
+                            never be able to explain to another person.
+                          </p>
+                        </div>
+                        <div class="PostReplyLikes">
+                          <span>
+                            <div class="hearth"></div>
+                            Like
+                          </span>
+                          ·
+                          <span>12k Likes </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="PostReply">
+                      <img
+                        class="PostAvatar"
+                        src="./assets/images/person_3.jpg"
+                        alt="Arturo Martinez"
+                      />
+                      <div class="PostReplyContent">
+                        <div class="PostReplyComment">
+                          <div class="PostReplyHeader">
+                            <h4 class="PostReplyHeaderName">Bianco Sosa</h4>
+                            <span class="PostReplyHeaderDate"
+                              >24 August at 20:43
+                            </span>
+                          </div>
+                          <p class="PostReplyBody">
+                            I’ve felt this pull many times, like while road
+                            tripping through Morocco. Seeking out the vastness
+                            of the desert, and looking inward at the same time.
+                          </p>
+                        </div>
+                        <div class="PostReplyLikes">
+                          <span>
+                            <div class="hearth"></div>
+                            Like
+                          </span>
+                          ·
+                          <span>12k Likes </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="Post">
+              <div class="PostContainer">
+                <div class="PostHeader">
+                  <img
+                    class="PostAvatar"
+                    src="./assets/images/person_3.jpg"
+                    alt="Eric Salman"
+                  />
+                  <div class="PostInfo">
+                    <h3 class="PostName">Eric Salman</h3>
+                    <span class="PostDate">24 August at 20:43 </span>
+                  </div>
+                </div>
+                <div class="PostBody">
+                  <p class="PostText">
+                    “We travel, some of us forever, lorem ipsum comment to seek
+                    other places, other lives, other souls.” – Anais Nin
+                  </p>
+                  <figure class="PostImage">
+                    <img
+                      src="./assets/images/post3.jpg"
+                      alt="Traveling – it leaves you speechless, then turns you into a storyteller."
+                    />
+                  </figure>
+                  <div class="PostCounts">
+                    <span class="PostCount">449 Comments</span>
+                    <span class="PostCount">59k Retweets</span>
+                    <span class="PostCount">234 Saved</span>
+                  </div>
+                  <ul class="PostActions">
+                    <li class="PostAction">
+                      <i class="tab-message"></i><span>Comment</span>
+                    </li>
+                    <li class="PostAction">
+                      <i class="tab-reload"></i><span>Retweeted</span>
+                    </li>
+                    <li class="PostAction PostAction--like">
+                      <div class="hearth"></div>
+                      <span>Liked</span>
+                    </li>
+                    <li class="PostAction">
+                      <i class="tab-mark"></i><span>Saved</span>
+                    </li>
+                  </ul>
+                  <div class="PostComment">
+                    <img
+                      class="PostAvatar"
+                      src="./assets/images/person_4.jpg"
+                      alt="Arturo Martinez"
+                    />
+                    <form class="PostForm">
+                      <input
+                        class="PostFormReply"
+                        type="text"
+                        placeholder="Tweet your reply"
+                      />
+                      <i class="tab-image"></i>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="Post">
+              <div class="PostContainer">
+                <div class="PostHeader">
+                  <img
+                    class="PostAvatar"
+                    src="./assets/images/person_3.jpg"
+                    alt="Eric Salman"
+                  />
+                  <div class="PostInfo">
+                    <h3 class="PostName">Eric Salman</h3>
+                    <span class="PostDate">24 August at 20:43 </span>
+                  </div>
+                </div>
+                <div class="PostBody">
+                  <p class="PostText">
+                    “We travel, some of us forever, lorem ipsum comment to seek
+                    other places, other lives, other souls.” – Anais Nin
+                  </p>
+                  <figure class="PostImage">
+                    <img
+                      src="./assets/images/post4.jpg"
+                      alt="Traveling – it leaves you speechless, then turns you into a storyteller."
+                    />
+                  </figure>
+                  <div class="PostCounts">
+                    <span class="PostCount">449 Comments</span>
+                    <span class="PostCount">59k Retweets</span>
+                    <span class="PostCount">234 Saved</span>
+                  </div>
+                  <ul class="PostActions">
+                    <li class="PostAction">
+                      <i class="tab-message"></i><span>Comment</span>
+                    </li>
+                    <li class="PostAction">
+                      <i class="tab-reload"></i><span>Retweeted</span>
+                    </li>
+                    <li class="PostAction PostAction--like">
+                      <div class="hearth"></div>
+                      <span>Liked</span>
+                    </li>
+                    <li class="PostAction">
+                      <i class="tab-mark"></i><span>Saved</span>
+                    </li>
+                  </ul>
+                  <div class="PostComment">
+                    <img
+                      class="PostAvatar"
+                      src="./assets/images/person_4.jpg"
+                      alt="Arturo Martinez"
+                    />
+                    <form class="PostForm">
+                      <input
+                        class="PostFormReply"
+                        type="text"
+                        placeholder="Tweet your reply"
+                      />
+                      <i class="tab-image"></i>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="Post">
+              <div class="PostContainer">
+                <div class="PostHeader">
+                  <img
+                    class="PostAvatar"
+                    src="./assets/images/person_3.jpg"
+                    alt="Eric Salman"
+                  />
+                  <div class="PostInfo">
+                    <h3 class="PostName">Eric Salman</h3>
+                    <span class="PostDate">24 August at 20:43 </span>
+                  </div>
+                </div>
+                <div class="PostBody">
+                  <p class="PostText">
+                    “We travel, some of us forever, lorem ipsum comment to seek
+                    other places, other lives, other souls.” – Anais Nin
+                  </p>
+                  <figure class="PostImage">
+                    <img
+                      src="./assets/images/post2.jpg"
+                      alt="Traveling – it leaves you speechless, then turns you into a storyteller."
+                    />
+                  </figure>
+                  <div class="PostCounts">
+                    <span class="PostCount">449 Comments</span>
+                    <span class="PostCount">59k Retweets</span>
+                    <span class="PostCount">234 Saved</span>
+                  </div>
+                  <ul class="PostActions">
+                    <li class="PostAction">
+                      <i class="tab-message"></i><span>Comment</span>
+                    </li>
+                    <li class="PostAction">
+                      <i class="tab-reload"></i><span>Retweeted</span>
+                    </li>
+                    <li class="PostAction PostAction--like">
+                      <div class="hearth"></div>
+                      <span>Liked</span>
+                    </li>
+                    <li class="PostAction">
+                      <i class="tab-mark"></i><span>Saved</span>
+                    </li>
+                  </ul>
+                  <div class="PostComment">
+                    <img
+                      class="PostAvatar"
+                      src="./assets/images/person_3.jpg"
+                      alt="Arturo Martinez"
+                    />
+                    <form class="PostForm">
+                      <input
+                        class="PostFormReply"
+                        type="text"
+                        placeholder="Tweet your reply"
+                      />
+                      <i class="tab-image"></i>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section mobile menu -->
+    <section class="MobileNav">
+      <ul class="MobileNavMenu">
+        <li class="MobileNavMenuItem">
+          <a href="" class="MobileNavMenuLink">
+            <i class="tab-house"></i>
+          </a>
+        </li>
+        <li class="MobileNavMenuItem MobileNavMenuItem--active">
+          <a href="" class="MobileNavMenuLink"> <i class="tab-compass"></i></a>
+        </li>
+        <li class="MobileNavMenuItem">
+          <a href="" class="MobileNavMenuLink">
+            <i class="tab-marksolid"></i
+          ></a>
+        </li>
+      </ul>
+    </section>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
